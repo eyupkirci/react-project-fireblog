@@ -31,6 +31,8 @@ return (
           <Link className="navbar-link" to="/login"><p>Login</p></Link>
           <Link className="navbar-link" to="/register"><p>Register</p></Link>
         </div>
+
+        
       )}
 
 

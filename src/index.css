@@ -18,6 +18,8 @@ body {
 
 
 
+
+
 .form-control{
   width: 300px;
   margin: 20px;
@@ -27,6 +29,9 @@ body {
 
 .register {
   background-image: url("https://picsum.photos/1200/900");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -81,4 +86,17 @@ body {
   text-decoration: underline;
   margin-left: 1.5rem;
   cursor: pointer;
+}
+.navbar-link {
+  text-decoration: none;
+}
+
+.btn-dark {
+  background-color: lightyellow;
+  color: #000000;
+}
+
+.google-logo {
+  height: 1.3rem;
+  vertical-align: bottom;
 }

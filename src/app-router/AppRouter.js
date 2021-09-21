@@ -1,22 +1,28 @@
-import React from 'react';
-import{ BrowserRouter, Switch, Route } from 'react-router-dom';
-import Navbar from "../components/navbar/Navbar";
-import Register from"../pages/Register";
-import Login from"../pages/Login";
+import React from "react";
 
-export default function AppRouter() {
-    return (
-        <BrowserRouter>
-            <Navbar/>
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Dashboard from "./../pages/Dashboard";
+import Login from "./../pages/Login";
+import Register from "./../pages/Register";
+import Navbar from "./../components/Navbar";
+import Profile from "./../pages/Profile";
+import NewBlog from "./../pages/NewBlog";
+import { AuthContextProvider } from "../contexts/AuthContext";
+import PrivateRouter from "./PrivateRouter";
 
-            <Switch>
+const Approuter = () => {
+  return (
+    <AuthContextProvider>
+      <Router>
+        <Navbar />
+        <PrivateRouter exact path="/" component={Dashboard} />
+        <PrivateRouter exact path="/profile" component={Profile} />
+        <PrivateRouter exact path="/new" component={NewBlog} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
+      </Router>
+    </AuthContextProvider>
+  );
+};
 
-                {/* <Route exact path="/" component={Dashboard}/> */}
-                <Route path="/register" component={Register}/>
-                <Route path="/login" component={Login}/>
-
-            </Switch>
-            
-        </BrowserRouter>
-    )
-}
+export default Approuter;
