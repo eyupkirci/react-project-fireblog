@@ -5,7 +5,6 @@ import { AuthContext } from "../contexts/AuthContext";
 import { Redirect } from "react-router";
 
 
-
 export default function Login() {
   const history = useHistory();
   const [email, setEmail] = useState('');

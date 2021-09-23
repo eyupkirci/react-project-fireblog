@@ -6,7 +6,8 @@
 
 body {
   background-color: #eee;
-  color: #fff;
+  /* color: #fff; */
+  color: red;
   font-family: "Poppins", "sans-serif";
   margin: 0;
 }
@@ -99,4 +100,7 @@ body {
 .google-logo {
   height: 1.3rem;
   vertical-align: bottom;
+}
+.content {
+  height: 250px;
 }

@@ -1,11 +1,9 @@
 import React, { useContext, useState } from "react";
-// import logo from "./../images/logo.jpeg";
+import logo from "./../images/logo.jpeg";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
-import { logOut } from "./../helpers/firebase";
-// import alertify from "alertifyjs";
-
+import { logOut } from "./../helpers/firebase"
 
 export default function Navbar() {
   const [showToggle, setShowToggle] = useState(false);
@@ -14,7 +12,7 @@ export default function Navbar() {
   return (
     <div className="navbar-container">
       <div className="container-logo">
-      <img className="logo" src="https://media-exp1.licdn.com/dms/image/D4D35AQGS2EuoiomlMA/profile-framedphoto-shrink_400_400/0/1631403664545?e=1632002400&v=beta&t=8WcILVGX5Zc9h-UPf4TxZIQajutv4-nVuQMOuxOeB2g" alt="cw_logo"/>
+        <img src={logo} alt="logo" className="logo" />
       </div>
       <div className="container-name">
         <a href="/" className="navbar-link">
