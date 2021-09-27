@@ -13,13 +13,13 @@ export default function Profile() {
   if (currentUser) {
       
       return (
-        <div className="register">
+        <div className="register" style={{textAlign: 'center'}}>
           
           <div className="register-form">
             <h1 className="form-title display-3">PROFILE</h1>
             <form id="register">
-    
-            <div className="mb-3" style={{textAlign: 'center'}}>
+            <i className="fas fa-user"></i>
+            <div className="mb-3" style={{marginTop:'3rem', textAlign: 'center'}}>
                 <p>{currentUser.email}</p>
             </div>
 
