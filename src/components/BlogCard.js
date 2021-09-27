@@ -14,11 +14,10 @@ console.log("******");
   return (
     <div className="blog-card-container">
       <div className="blog-card blog-card-img-container"
-        // style={{ backgroundImage: `url(${props.image})` }}
       >
-        <img src={props.image} alt="blog image" />
+        <img src={props.image} style={{padding:'10px', width: "100%", height: "100%"}} alt="blog image" />
       </div>
-      <div className="blog-card blog-card-main-container ">
+      <div className="blog-card blog-card-main-container " >
         <h2>{props.title}</h2>
         <h3>{props.date}</h3>
         <p>{props.content}</p>
