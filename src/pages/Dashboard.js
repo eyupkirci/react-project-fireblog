@@ -3,6 +3,7 @@ import BlogCard from '../components/BlogCard';
 import { readData,updatedata } from '../helpers/firebase'
 import { doc } from '@firebase/firestore';
 import { async } from '@firebase/util';
+
 export default function Dashboard() {
 
     const [data, setData] = useState([])
@@ -11,12 +12,9 @@ export default function Dashboard() {
         readData(setData);
     }, [])
 
-
-
     return (
 
        data.map((doc,key)=> {
-        //    return <h1>{s.data().author}</h1>
         {console.log(doc.data())}
         return <BlogCard
                     id={doc.id}

@@ -16,7 +16,7 @@ export default function Profile() {
         <div className="register" style={{textAlign: 'center'}}>
           
           <div className="register-form">
-            <h1 className="form-title display-3">PROFILE</h1>
+            <h1 className="form-title display-3">--PROFILE--</h1>
             <form id="register">
             <i className="fas fa-user"></i>
             <div className="mb-3" style={{marginTop:'3rem', textAlign: 'center'}}>

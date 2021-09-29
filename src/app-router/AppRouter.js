@@ -7,6 +7,7 @@ import Register from "./../pages/Register";
 import Navbar from "./../components/Navbar";
 import Profile from "./../pages/Profile";
 import NewBlog from "./../pages/NewBlog";
+import Details from "./../pages/Details";
 import { AuthContextProvider } from "../contexts/AuthContext";
 import PrivateRouter from "./PrivateRouter";
 
@@ -17,6 +18,7 @@ const Approuter = () => {
         <Navbar />
         <Route exact path="/" component={Dashboard} />
         <PrivateRouter exact path="/profile" component={Profile} />
+        <PrivateRouter exact path="/details" component={Details} />
         <PrivateRouter exact path="/new" component={NewBlog} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
