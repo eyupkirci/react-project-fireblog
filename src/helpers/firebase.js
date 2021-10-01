@@ -105,7 +105,7 @@ export const userObserver = (setCurrentUser, setPending) => {
       // ...
     }
   });
-};
+}; 
 
 export const logOut = () => {
   const auth = getAuth();
@@ -121,7 +121,7 @@ export const logOut = () => {
 
 // firestore
 
-const db = getFirestore();
+export const db = getFirestore();
 
 export const addData = async (currentUser, title, content, image) => {
   try {

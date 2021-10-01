@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { updateLike } from "../helpers/firebase";
 import "./BlogCard.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
 
 
@@ -15,6 +15,15 @@ export default function BlogCard(props) {
   const updateLikes = () => {
     updateLike(props.id);
     setLike(like + 1);
+  };
+
+  const history = useHistory()
+
+
+  const openDetails = (e) => {
+    // console.log(e.target.id);
+    history.push("/details/" + e.target.id)
+
   };
 
 
@@ -59,15 +68,22 @@ export default function BlogCard(props) {
                 <button className="blog-card-btn" onClick={updateLikes}>
                   <i className="far fa-comment" style={like > 0 ? { color: "red" } : { color: "black" }} style={like > 0 ? { color: "red" } : { color: "black" }}></i>
                 </button>{like}</div>
+
+              {currentUser.email===props.author?
+              (
               <div>
-                <button className="blog-card-btn"><Link to="/detils" ><p>...</p></Link>
+                <button className="blog-card-btn"><Link to="/Details" ><i className="far fa-info-square">...</i></Link>
                 </button>
               </div>
+              )
+              :
+              null}
             </>
           }
           
         </div>
       </div>
+     <div className="blog-card-layer" id={props.id} onClick={(e)=>openDetails(e)}></div>
     </div>
   );
 }
